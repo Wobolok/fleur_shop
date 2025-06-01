@@ -9,8 +9,8 @@
   --creamy-white:rgb(219, 219, 255);
   --black:rgb(57, 57, 57);
   --lightgray:rgb(157, 157, 157);
-  --violet:rgb(136, 0, 255);
-  --lightviolet:rgba(136, 0, 255, 0.1);
+  --violet:#625ded;
+  --lightviolet:rgba(0, 0, 0, 0.04);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,4 +30,11 @@ body {
   width: 1920px;
   background-color: var(--creamy-white);
   color: var(--black);
+}
+
+input[type="text"], select {
+  background-color: var(--lightviolet);
+  border: none;
+  color: var(--black);
+  outline: none;
 }

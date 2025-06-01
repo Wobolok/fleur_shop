@@ -1,0 +1,45 @@
+.review {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightviolet);
+    border-radius: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.date {
+    color: var(--lightgray);
+    font-size: 1.5rem;
+}
+
+.body {
+    width: 100%;
+    margin: 1rem 0;
+    text-wrap: balance;
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+
+    button {
+        appearance: none;
+        aspect-ratio: 1;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        svg {
+            width: 2rem;
+            aspect-ratio: 1;
+            stroke: var(--black);
+        }
+    }
+}

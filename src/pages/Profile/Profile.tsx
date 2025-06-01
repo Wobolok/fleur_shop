@@ -1,5 +1,7 @@
 import styles from './Profile.module.css'
 import User from '../../shared/User/User'
+import Purchase from '../../shared/Purchase/Purchase'
+import Review from '../../shared/Review/Review'
 
 const Profile = () => {
   return (
@@ -8,9 +10,20 @@ const Profile = () => {
         <div className={styles.related}>
           <div className={styles.history}>
             <div className={styles.header}>История покупок<button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button></div>
+            <div className={styles.wrapper}>
+              <Purchase />
+              <Purchase />
+              <Purchase />
+              <Purchase />
+              <Purchase />
+            </div>
           </div>
           <div className={styles.reviews}>
             <div className={styles.header}>Мои отзывы<button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button></div>
+            <div className={styles.wrapper}>
+              <Review />
+              <Review />
+            </div>
           </div>
         </div>
     </div>

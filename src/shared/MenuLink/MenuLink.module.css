@@ -21,7 +21,7 @@
     }
 
     .tip {
-        padding: 0 1rem;
+        padding: 3px 1rem;
         position: absolute;
         left: calc(100% + 1rem);
         font-size: 2rem;
