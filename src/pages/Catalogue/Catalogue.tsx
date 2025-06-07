@@ -1,24 +1,48 @@
-import styles from './Catalogue.module.css'
+import styles from "./Catalogue.module.css"
+import Filters from "../../shared/Filters/Filters"
+import ProductCard from "../../shared/ProductCard/ProductCard"
+import { data } from "./data"
+import { type ReactNode, useState } from "react"
+import Modal from "../../shared/Modal/Modal"
+import TagSelect from "../../shared/TagSelect/TagSelect"
+import { data as tagData } from "../../shared/TagSelect/data"
 
 const Catalogue = () => {
-  return (
-    <div className={styles.catalogue}>
-        <div className={styles.filters}>
-          <select name="" id="">
-            <option value="" selected hidden>Фильтровать</option>
-            <option value="">Избранное</option>
-            <option value="">Недавно добавленное</option>
-            <option value="">Подешевле</option>
-            <option value="">Подороже</option>
-          </select>
-          <input type="text" placeholder='Поиск по товарам' />
-          <div className={styles.mode}></div>
-        </div>
-        <div className={styles.stuff}>
+	const [layout, setLayout] = useState("grid")
+	const [modalOpen, setModalOpen] = useState<boolean>(false)
+	const [modalContent, setModalContent] = useState<ReactNode>("")
 
-        </div>
-    </div>
-  )
+	return (
+		<div className={styles.catalogue}>
+			<Filters
+				handleAddProduct={() => {
+					setModalOpen(true)
+					setModalContent("")
+				}}
+			/>
+			<TagSelect data={tagData} />
+			<div className={styles.stuff}>
+				{data.map((item, index) => (
+					<ProductCard
+						key={index}
+						img={item.img}
+						name={item.name}
+						price={item.price}
+					/>
+				))}
+			</div>
+			<Modal
+				title=""
+				isOpen={modalOpen}
+				onClose={() => {
+					setModalOpen(false)
+					setModalContent("")
+				}}
+			>
+				{modalContent}
+			</Modal>
+		</div>
+	)
 }
 
 export default Catalogue

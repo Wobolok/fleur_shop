@@ -1,0 +1,36 @@
+.option {
+  padding: 3px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  svg {
+    width: 2rem;
+    aspect-ratio: 1;
+    stroke: var(--black);
+    stroke-width: 2;
+    user-select: none;
+    pointer-events: none;
+    transition: stroke 0.2s ease;
+  }
+
+  &:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+}
+
+.active {
+  background-color: var(--violet);
+
+  &:hover {
+    background-color: var(--violet);
+  }
+
+  svg {
+    stroke: var(--white);
+  }
+}

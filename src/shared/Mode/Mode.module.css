@@ -1,0 +1,8 @@
+.mode {
+  padding: 3px;
+	display: flex;
+	align-items: center;
+  gap: 3px;
+  background-color: var(--lightviolet);
+  border-radius: 3px;
+}

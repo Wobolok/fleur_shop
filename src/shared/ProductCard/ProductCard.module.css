@@ -1,0 +1,105 @@
+.card {
+	padding: 1rem;
+	width: 100%;
+	height: fit-content;
+	height: -moz-fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	border-radius: 1.5rem;
+	background-color: var(--white);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+	img {
+		width: 100%;
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 1rem;
+	}
+}
+
+.title {
+	width: 100%;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.price {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.75rem;
+
+	svg {
+		width: 2rem;
+		aspect-ratio: 1;
+	}
+}
+
+.price button {
+	appearance: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+
+	svg {
+		width: 2.5rem;
+		aspect-ratio: 1;
+		stroke: var(--black);
+		transition: 0.2s ease;
+	}
+
+	&:hover {
+		svg {
+			stroke: #ef046a;
+			fill: #ef046a;
+		}
+	}
+}
+
+.favourite {
+	svg {
+		stroke: #ef046a !important;
+		fill: #ef046a;
+	}
+
+	&:hover {
+		svg {
+			stroke: #ef046a;
+			fill: #ef046a;
+		}
+	}
+}
+
+.card button[id="add_to_cart"] {
+	appearance: none;
+	padding: 5px 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	font-size: 1.75rem;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	background-color: var(--violet);
+	transition: background-color 0.2s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba(98, 93, 237, 0.9);
+	}
+
+	svg {
+		width: 2rem;
+		aspect-ratio: 1;
+	}
+}

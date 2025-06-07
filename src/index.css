@@ -27,12 +27,24 @@
 
 body {
   margin: 0 auto;
-  width: 1920px;
+  width: 100%;
   background-color: var(--creamy-white);
   color: var(--black);
 }
 
-input[type="text"], select {
+body::-webkit-scrollbar {
+  display: none;
+}
+
+input[type="text"] {
+  background-color: var(--lightviolet);
+  border: none;
+  color: var(--black);
+  outline: none;
+}
+
+select, select::picker(select) {
+  appearance: base-select;
   background-color: var(--lightviolet);
   border: none;
   color: var(--black);

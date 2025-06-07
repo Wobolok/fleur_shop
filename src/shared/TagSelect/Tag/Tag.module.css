@@ -1,0 +1,27 @@
+.tag {
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-wrap: nowrap;
+	background-color: var(--lightviolet);
+	border-radius: 2rem;
+	user-select: none;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+}
+
+.selected {
+  background-color: var(--violet);
+  color: var(--white);
+
+  &:hover {
+		background-color: var(--violet);
+	}
+}

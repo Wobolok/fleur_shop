@@ -1,0 +1,59 @@
+@keyframes show {
+	from {
+    opacity: 0;
+    transform: scale(0.5);
+	}
+
+	to {
+    opacity: 1;
+    transform: scale(1);
+	}
+}
+
+.modal {
+	padding: 1rem;
+	position: absolute;
+	margin: auto;
+	inset: 0;
+	width: 500px;
+	height: 600px;
+	outline: none;
+	border: none;
+	background-color: var(--white);
+	border-radius: 2rem;
+  animation: show 0.2s ease;
+
+	&::backdrop {
+		background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    animation: none;
+    transition: 0.2s ease;
+	}
+}
+
+.modal button {
+	appearance: none;
+	padding: 3px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	aspect-ratio: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	background-color: transparent;
+	cursor: pointer;
+
+	svg {
+		width: 3rem;
+		aspect-ratio: 1;
+		stroke: var(--violet);
+	}
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+}
